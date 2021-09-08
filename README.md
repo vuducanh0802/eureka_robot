@@ -34,6 +34,8 @@ Secondly, for the PRM:
 
 
 ![Random Structure](PRM.jpg)
+
+
 By using the same number of nodes as that of the first approach, this approach cannot find a path since there is a higher chance that nodes created are distributed not well, resulting in some cases of dead end. This approach is also sensitive when the number of obstacles is high. In addition, if all solutions must pass through an area near the edge, there is a higher chance of not finding a solution as nodes are randomly created.
 <br><br>
 
