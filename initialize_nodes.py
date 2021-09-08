@@ -17,8 +17,9 @@ def init_nodes(env, random):
         i = np.random.uniform(0, 10, 100)
         j = np.random.uniform(0, 6, 100)
         for ii,jj in zip(i,j):
-            points.append((ii, jj))
-            env.plot_query(ii, jj, x_goal, y_goal)
+            if not env.check_collision(ii, jj):
+                points.append((ii, jj))
+                env.plot_query(ii, jj, x_goal, y_goal)
 
     points.append([x_goal, y_goal])
     return points, x_start, y_start, x_goal, y_goal, q
