@@ -34,9 +34,6 @@ The approach can find the optimal path hence I combined both Exercise 1 & 2 into
 
 ### Post Processing
 - processing.py
-
-![Post Processing](images/post_processing_result.png)
-
 For the reason of simplicity and time complexity, I chose to post process by taking the midpoints of all valid edges of the optimal path found
 
 
@@ -66,8 +63,12 @@ However, when we can to few obstacles case, the PRM approach took less nodes and
 
 ![Few Obstacles](images/few_obstacles.png)
 
+After finish implementing the PRM model, I continue to post-process the path by taking the midpoints of all valid edges of the optimal path found
+
+![Post Processing](images/post_processing_result.png)
 
 
+Below is the observation between grid and PRM approach
 
 Approach| Cases | Large obstacles| Many Obstacles | Many nodes | Distance Priority | Time Priority
 ---  |--- | :-: | :-: | :-: | :-: | :-: |
