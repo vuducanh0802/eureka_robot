@@ -11,7 +11,6 @@ np.random.seed(4)
 def robo(env, random = False):
   start = time.process_time()
   pl.ion()
-
   pl.clf()
   #Initialize nodes (grid or random)
   env.plot()
@@ -49,10 +48,40 @@ def robo(env, random = False):
   #Visualization
   ##Draw path
   path = rank[(x_goal,y_goal)][0]
+
+  ##########################   POST_PROCESSING
+  new_path = []
+  for i in range(0,len(path)-5,4):
+    xx1 = (path[i] + path[i+2])/2
+    yy1 = (path[i+1] + path[i+3])/2
+    xx2 = (path[i+2] + path[i + 4]) / 2
+    yy2 = (path[i + 3] + path[i + 5]) / 2
+    flag = 0
+    for triangle in env.obs:
+      T1x, T1y, T2x, T2y, T3x, T3y = triangle.x0, triangle.y0, triangle.x1, triangle.y1, triangle.x2, triangle.y2
+      if (xx1,yy1) != (xx2,yy2) and distance((xx1,yy1), (xx2,yy2)) <= 5 and (
+      not intersect(xx1, yy1, xx2, yy2, T1x, T1y, T2x, T2y)) and (
+      not intersect(xx1, yy1, xx2, yy2, T2x, T2y, T3x, T3y)) and (
+      not intersect(xx1, yy1, xx2, yy2, T1x, T1y, T3x, T3y)):
+        continue
+      else:
+        flag = 1
+    if flag == 0:
+      new_path += [path[i],path[i+1]]
+      new_path += [xx1, yy1]
+      new_path += [xx2, yy2]
+      new_path += [path[i+4],path[i+5]]
+    else:
+      new_path += [path[i],path[i+1]]
+      new_path += [path[i+2],path[i+3]]
+      new_path += [path[i+4],path[i+5]]
+
+  path = new_path
   ###draw first path
   pl.plot([x_start,path[0]], [y_start, path[1]], "y", linewidth=2)
   ###Draw the rest
   for i in range(0,len(path)-3,2):
+    print([path[i], path[i+2], path[i+1], path[i+3]])
     pl.plot([path[i], path[i+2]], [path[i+1], path[i+3]], "y", linewidth=2)
 
   if q is not None:
