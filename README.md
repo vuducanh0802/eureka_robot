@@ -25,7 +25,7 @@ The approach can find the optimal path hence I combined both Exercise 1 & 2 into
 ## Result
 First, for grid structure: 
 <br><br>
-![Grid Structure](grid_structure.jpg) 
+![Grid Structure](images/random_structure.jpg) 
 
 
 If we use more nodes (converges to infinity), it will converges to the shortest path.
@@ -33,7 +33,7 @@ If we use more nodes (converges to infinity), it will converges to the shortest 
 Secondly, for the PRM:
 
 
-![Random Structure](PRM.jpg)
+![Random Structure](images/PRM.jpg)
 
 
 By using the same number of nodes as that of the first approach, this approach cannot find a path since there is a higher chance that nodes created are distributed not well, resulting in some cases of dead end. This approach is also sensitive when the number of obstacles is high. In addition, if all solutions must pass through an area near the edge, there is a higher chance of not finding a solution as nodes are randomly created.
@@ -42,7 +42,9 @@ By using the same number of nodes as that of the first approach, this approach c
 In first image, I used 7x11 nodes compares to 100x100 nodes in the second. However, the second approach took about 150 seconds comparing to about 3 seconds of the first one
 
 
+However, when we can to few obstacles case, the PRM approach took less nodes and less time to find optimal path than the grid-based approach. 
 
+![Few Obstacles](images/few_obstacles.png)
 
 
 
