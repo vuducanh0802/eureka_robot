@@ -52,9 +52,9 @@ However, when we can to few obstacles case, the PRM approach took less nodes and
 
 
 Approach| Cases | Large obstacles| Many Obstacles | Many nodes | Distance Priority | Time Priority
---- | --- | :-: | :-: |:-: |:-: |:-: |
-Grid |  |   X |  X  |     |  X  |   | 
-PRM  |  |     |     |X    |     | X |  
+---  |--- | :-: | :-: | :-: | :-: | :-: |
+Grid |    |  X  |  X  |     |  X  |     | 
+PRM  |    |     |     |  X  |     |  X  |  
 
 
 
