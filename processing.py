@@ -81,7 +81,6 @@ def robo(env, random = False):
   pl.plot([x_start,path[0]], [y_start, path[1]], "y", linewidth=2)
   ###Draw the rest
   for i in range(0,len(path)-3,2):
-    print([path[i], path[i+2], path[i+1], path[i+3]])
     pl.plot([path[i], path[i+2]], [path[i+1], path[i+3]], "y", linewidth=2)
 
   if q is not None:
