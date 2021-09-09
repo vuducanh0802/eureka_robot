@@ -25,7 +25,7 @@ The approach can find the optimal path hence I combined both Exercise 1 & 2 into
 ## Result
 First, for grid structure: 
 <br><br>
-![Grid Structure](images/random_structure.jpg) 
+![Grid Structure](images/grid_structure.jpg) 
 
 
 If we use more nodes (converges to infinity), it will converges to the shortest path.
