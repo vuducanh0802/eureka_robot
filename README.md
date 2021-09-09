@@ -22,6 +22,12 @@ https://osrobotics.org/osr/planning/post_processing.html
 
 First I will created nodes that are not inside the given obstacles. The initialization step will contain 2 cases: grid structure and random structure and evaluation between both approach will be given later. Then nodes that do not cross any obstacles will be connected. After that, Dijkstra algorithm will be utilised in order to find the shortest path. 
 The approach can find the optimal path hence I combined both Exercise 1 & 2 into 1 single problem
+- main.py: the input is the size of the environment, the number of obstacles and whether the initialized nodes are grid based or PRM. The output is graph with optimal path based on nodes initialized.
+- initialize_nodes.py: there are two cases: grid-based and PRM approach.
+- dijkstra.py: find optimal path
+- processing.py: the backend of main.py
+- utils.py
+- images: results
 ## Result & Evaluation
 First, for grid structure: 
 <br><br>
