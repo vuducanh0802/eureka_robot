@@ -22,7 +22,7 @@ https://osrobotics.org/osr/planning/post_processing.html
 
 First I will created nodes that are not inside the given obstacles. The initialization step will contain 2 cases: grid structure and random structure and evaluation between both approach will be given later. Then nodes that do not cross any obstacles will be connected. After that, Dijkstra algorithm will be utilised in order to find the shortest path. 
 The approach can find the optimal path hence I combined both Exercise 1 & 2 into 1 single problem
-## Result
+## Result & Evaluation
 First, for grid structure: 
 <br><br>
 ![Grid Structure](images/grid_structure.jpg) 
